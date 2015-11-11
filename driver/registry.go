@@ -28,7 +28,7 @@ func GetDriver(name string) Driver {
 	driversMu.Lock()
 	defer driversMu.Unlock()
 	driver := drivers[name]
-	fmt.Printf("drivers: %+v", drivers)
+	panic(fmt.Sprintf("drivers: %+v", drivers))
 	return driver
 }
 
