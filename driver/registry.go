@@ -1,6 +1,7 @@
 package driver
 
 import (
+	"fmt"
 	"sort"
 	"sync"
 )
@@ -28,7 +29,7 @@ func GetDriver(name string) Driver {
 	driversMu.Lock()
 	defer driversMu.Unlock()
 	driver := drivers[name]
-	fmt.Errorf("Driver '%s' not found.", u.Scheme)
+	fmt.Errorf("Drivers: %+v", drivers)
 	return driver
 }
 
