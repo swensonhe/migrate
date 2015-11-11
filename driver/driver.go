@@ -81,7 +81,7 @@ func New(url string) (Driver, error) {
                 }
                 return d, nil
         default:
-                return nil, errors.New(fmt.Sprintf("Driver '%s' not found.", u.Scheme))
+                return nil, errors.New(fmt.Sprintf("DRIVERS '%s' not found.", u.Scheme))
         }
 }
 
